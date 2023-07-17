@@ -1,0 +1,27 @@
+{
+  "name": "@character-vault/root",
+  "version": "1.0.0",
+  "author": "Brent Tunnicliff",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "sst build",
+    "console": "sst console",
+    "deploy": "sst deploy",
+    "dev": "sst dev",
+    "remove": "sst remove",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^16.1.0",
+    "@types/node": "^20.4.2",
+    "aws-cdk-lib": "2.84.0",
+    "constructs": "10.1.156",
+    "dotenv": "^16.3.1",
+    "sst": "^2.18.4",
+    "typescript": "^5.1.6"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
