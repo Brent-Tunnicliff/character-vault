@@ -1,6 +1,6 @@
 import 'dotenv/config'; // Loads `.env` values.
 import { SSTConfig } from "sst";
-import { Main } from "./stacks";
+import { Api } from "./stacks";
 
 export default {
   config(_input) {
@@ -10,6 +10,6 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(Main);
+    app.stack(Api);
   }
 } satisfies SSTConfig;

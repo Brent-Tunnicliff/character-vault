@@ -1,10 +1,12 @@
 import { StackContext, use } from "sst/constructs";
-import { Auth } from "./Auth";
-import { AppSync } from "./AppSync";
+import { Auth } from "./auth";
+import { AppSync } from "./app-sync";
+import { Database } from "./database";
 
-export function Main ({ app, stack }: StackContext) {
+export function Api ({ app, stack }: StackContext) {
   const auth = use(Auth);
-  const appAync = use(AppSync)
+  const appSync = use(AppSync)
+  const database = use(Database)
 
   // TODO: add main
 

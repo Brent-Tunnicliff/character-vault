@@ -7,8 +7,11 @@
     "typecheck": "tsc -noEmit"
   },
   "devDependencies": {
+    "@pothos/core": "^3.31.0",
+    "@pothos/plugin-with-input": "^3.10.1",
     "@types/aws-lambda": "^8.10.119",
     "@types/node": "^20.3.3",
+    "graphql-yoga": "^4.0.3",
     "sst": "^2.18.4",
     "vitest": "^0.32.4"
   }
