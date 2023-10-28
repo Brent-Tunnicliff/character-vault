@@ -1,1 +1,54 @@
-scalar AWSDateTime
+"""Character sheet field."""
+type Field {
+  input: Input!
+  name: String!
+}
+
+"""Base user input type."""
+interface Input {
+  type: InputType!
+}
+
+"""Counter user input type."""
+type InputCounter implements Input {
+  maximum: Int!
+  minimum: Int!
+  type: InputType!
+  value: Int!
+}
+
+"""Number user input type."""
+type InputNumber implements Input {
+  type: InputType!
+  value: Int!
+}
+
+"""Read only type."""
+type InputReadOnly implements Input {
+  type: InputType!
+}
+
+"""Multiline text user input type."""
+type InputTextBlock implements Input {
+  type: InputType!
+  value: String!
+}
+
+"""Single line text user input type."""
+type InputTextField implements Input {
+  type: InputType!
+  value: String!
+}
+
+"""Types of input fields."""
+enum InputType {
+  COUNTER
+  NUMBER
+  READ_ONLY
+  TEXT_BLOCK
+  TEXT_FIELD
+}
+
+type Mutation
+
+type Query
